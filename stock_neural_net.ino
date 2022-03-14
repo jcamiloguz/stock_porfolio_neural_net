@@ -111,7 +111,7 @@ Input[0]=Entrada;
 * Cálculo de la salida de 2da capa oculta
 ******************************************************************/ 
     for( i = 0 ; i < HiddenNodes2 ; i++ ) {    
-      Accum = HiddenWeights2[i][InputNodes] ;
+      Accum = HiddenWeights2[i][HiddenNodes1] ;
       for( j = 0 ; j < HiddenNodes1 ; j++ ) {
         Accum += HiddenWeights2[i][j]*Hidden1[j];
       }
@@ -121,7 +121,7 @@ Input[0]=Entrada;
 * Cálculo de la salida de 3ra capa oculta
 ******************************************************************/ 
     for( i = 0 ; i < HiddenNodes3 ; i++ ) {    
-      Accum = HiddenWeights3[i][InputNodes] ;
+      Accum = HiddenWeights3[i][HiddenNodes2] ;
       for( j = 0 ; j < HiddenNodes2 ; j++ ) {
         Accum += HiddenWeights3[i][j]*Hidden2[j];
       }
